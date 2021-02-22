@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: boader-box;
+  /* No more boxing spaces are added */
+}
+
+body {
+  font-family: "lato" , sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgb(204, 52, 98);
+  padding: 30px;
+}
+
+.header {
+  height: 75vh; /* 95% of viewport height*/
+  background-image: linear-gradient(to right bottom, #a2c5e41a, #d4c1ea, #e6bfec);
+  background-size: cover; /* adjust and fits acc to the width of the screen*/
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 65%,50% 500px, 0 65%);
+
+
+  
+}
+
+.logo-container {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+
+}
+
+.logo {
+  height: 150px;
+}
+
+
+.primary-heading {
+  color: white ;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%; /*In relation with the viewport body*/
+  transform: translate(-50%, -50%); /*in reltion w the element itself*/
+  text-align: center;
+}
+
+.primary-heading-main {
+ display: block;
+ font-size: 30px;  
+ font-weight: 400;
+ letter-spacing: 3px;
+ animation-name: moveInLeft;
+ animation-duration: 3s;
+ animation-delay: 1s;
+ animation-timing-function: ease-out;
+
+}
+
+.primary-heading-sub {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1.5px ;
+  animation-name: moveInRigth;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out; 
+  margin-bottom: 100px
+  ;
+
+  
+
+
+}
+
+
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+
+  80% {
+    opacity: 0.8;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes  moveInRigth {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(-20px);
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+
+  }
+}
+
